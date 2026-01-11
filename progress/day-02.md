@@ -20,9 +20,14 @@ Day 2 was all about getting hands-on with Spark DataFrames and understanding how
 
 Small steps, but solid foundations in Spark and Databricks 
 
+## Notebooks
+
+![Day 2 File](../submissions/day02/Day2.html)
+
 ## Screenshots
 
-![Day 2 screenshot](../assets/day-02/day02_ss1.png)
-![Day 2 screenshot](../assets/day-02/day02_ss2.png)
-![Day 2 screenshot](../assets/day-02/day02_ss3.png)
-![Day 2 screenshot](../assets/day-02/day02_ss4.png)
+![Day 2 File](../submissions/day02/day2a.png)
+
+![Day 2 File](../submissions/day02/day2b.png)
+
+![Day 2 File](../submissions/day02/day2c.png)
