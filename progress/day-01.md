@@ -24,11 +24,16 @@ Since we’re using Kaggle for datasets, I went a step further and configured se
 
 Looking forward to diving deeper into Spark, data processing, and real-world pipelines in the coming days.
 
+## Notebooks
+
+![Day 0 File](../submissions/day01/Day0.html)
+
+![Day 1 File](../submissions/day01/Day1.html)
 
 ## Screenshots
 
-![Day 0 File](../submissions/day01/Day0.html)
-![Day 1 File](../submissions/day01/Day1.html)
 ![Day 1 File](../submissions/day01/day1a.png)
+
 ![Day 1 File](../submissions/day01/day1b.png)
+
 ![Day 1 File](../submissions/day01/day1c.png)
