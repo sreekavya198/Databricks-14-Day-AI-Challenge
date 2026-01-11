@@ -48,7 +48,7 @@ display(revenue)
 
 ## Notebooks
 
-![Day 3 File](../submissions/day03/Day3.html)
+![Day 3 File](../submissions/day03/Day3.ipynb)
 
 ## Screenshots
 
