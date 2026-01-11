@@ -22,7 +22,7 @@ Small steps, but solid foundations in Spark and Databricks
 
 ## Notebooks
 
-![Day 2 File](../submissions/day02/Day2.html)
+![Day 2 File](../submissions/day02/Day2.ipynb)
 
 ## Screenshots
 
