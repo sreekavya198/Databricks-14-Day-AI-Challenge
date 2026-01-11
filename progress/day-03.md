@@ -5,7 +5,7 @@ Today I practiced **core PySpark transformations** on an e-commerce events datas
 ---
 
 ## 📌 Dataset Used
-**File:** `2019-Oct.csv`  
+**File:** `2019-Oct.csv`   and `2019-Nov.csv`
 **Columns:** `event_time, event_type, product_id, category_id, category_code, brand, price, user_id, user_session`
 
 ---
@@ -46,9 +46,14 @@ revenue = (events
 display(revenue)
 ```
 
-### Screenshots
+## Notebooks
+
+![Day 3 File](../submissions/day03/Day3.html)
+
 ## Screenshots
 
-![Day 2 screenshot](../assets/day-03/ss1.png)
-![Day 2 screenshot](../assets/day-03/ss2.png)
-![Day 2 screenshot](../assets/day-03/ss3.png)
+![Day 3 File](../submissions/day03/day3a.png)
+
+![Day 3 File](../submissions/day03/day3b.png)
+
+![Day 3 File](../submissions/day03/day3c.png)
