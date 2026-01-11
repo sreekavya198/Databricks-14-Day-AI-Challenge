@@ -26,9 +26,9 @@ Looking forward to diving deeper into Spark, data processing, and real-world pip
 
 ## Notebooks
 
-![Day 0 File](../submissions/day01/Day0.html)
+![Day 0 File](../submissions/day01/Day0.ipynb)
 
-![Day 1 File](../submissions/day01/Day1.html)
+![Day 1 File](../submissions/day01/Day1.ipynb)
 
 ## Screenshots
 
