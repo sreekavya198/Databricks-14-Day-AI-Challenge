@@ -25,3 +25,6 @@ Since we’re using Kaggle for datasets, I went a step further and configured se
 Looking forward to diving deeper into Spark, data processing, and real-world pipelines in the coming days.
 
 
+## Screenshots
+
+![Day 1 File](../submissions/day01/Day0.html)
