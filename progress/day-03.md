@@ -57,3 +57,5 @@ display(revenue)
 ![Day 3 File](../submissions/day03/day3b.png)
 
 ![Day 3 File](../submissions/day03/day3c.png)
+
+![Day 3 File](../submissions/day03/day3d.png)
