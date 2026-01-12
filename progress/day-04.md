@@ -1,50 +1,53 @@
-# Day 3 Completed — PySpark Transformations Deep Dive (Databricks 14 Days AI Challenge)
+# Day 4 Completed — Delta Lake Introduction (Databricks 14 Days AI Challenge)
 
-Today I practiced **core PySpark transformations** on an e-commerce events dataset in Databricks.
+Today I practiced **Delta Table** on an e-commerce events dataset in Databricks.
 
 ---
 
 ## 📌 Dataset Used
-**File:** `2019-Oct.csv`  
+**File:** `2019-Oct.csv` , `2019-Nov.csv`
 **Columns:** `event_time, event_type, product_id, category_id, category_code, brand, price, user_id, user_session`
 
 ---
 
 ## 📘 What I Learned Today
-- Difference between **PySpark vs Pandas** (distributed vs local)
-- Basic **groupBy + aggregation** for analytics
-- **Window functions** for running totals per user
-- **Pivot** to reshape event counts (view vs purchase)
-- Creating simple **derived features** like conversion rate
+- What is Delta Lake?
+- ACID transactions
+- Schema enforcement
+- Delta vs Parquet
 
 ---
 
 ## 🛠️ Tasks I Completed
-1. Loaded the October e-commerce dataset
-2. Calculated **Top 5 products by revenue**
-3. Created **running total (cumulative events) per user**
-4. Calculated **conversion rate by category** (purchase ÷ view)
+1. Convert CSV to Delta format
+2. Create Delta tables (SQL and PySpark)
+3. Test schema enforcement
+4. Handle duplicate inserts
 
 ---
 
 ##  Practice Queries (Beginner Version)
 
-### 1) Top 5 products by revenue
+# Convert to Delta
+events.write.format("delta").mode("overwrite").save("/delta/events")
 
+# Create managed table
+events.write.format("delta").saveAsTable("events_table")
 
-```python
-from pyspark.sql import functions as F
+# SQL approach
+spark.sql("""
+    CREATE TABLE events_delta
+    USING DELTA
+    AS SELECT * FROM events_table
+""")
 
-revenue = (events
-    .filter(F.col("event_type") == "purchase")
-    .groupBy("product_id")
-    .agg(F.sum("price").alias("revenue"))
-    .orderBy(F.desc("revenue"))
-    .limit(5)
-)
+# Test schema enforcement
+try:
+    wrong_schema = spark.createDataFrame([("a","b","c")], ["x","y","z"])
+    wrong_schema.write.format("delta").mode("append").save("/delta/events")
+except Exception as e:
+    print(f"Schema enforcement: {e}")
 
-display(revenue)
-```
 
 ### Screenshots
 ## Screenshots
