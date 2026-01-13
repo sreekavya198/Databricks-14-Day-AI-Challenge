@@ -1,6 +1,6 @@
-# Day 4 Completed — Delta Lake Introduction (Databricks 14 Days AI Challenge)
+# Day 4 Completed – Delta Lake Advanced (Databricks 14 Days AI Challenge)
 
-Today I practiced **Delta Table** on an e-commerce events dataset in Databricks.
+Today I practiced **Advanced Delta Table** on an e-commerce events dataset in Databricks.
 
 ---
 
@@ -11,52 +11,54 @@ Today I practiced **Delta Table** on an e-commerce events dataset in Databricks.
 ---
 
 ## 📘 What I Learned Today
-- What is Delta Lake?
-- ACID transactions
-- Schema enforcement
-- Delta vs Parquet
+- Time travel (version history)
+- MERGE operations (upserts)
+- OPTIMIZE & ZORDER
+- VACUUM for cleanup
 
 ---
 
 ## 🛠️ Tasks I Completed
-1. Convert CSV to Delta format
-2. Create Delta tables (SQL and PySpark)
-3. Test schema enforcement
-4. Handle duplicate inserts
+1. Implement incremental MERGE
+2. Query historical versions
+3. Optimize tables
+4. Clean old files
 
 ---
 
 ##  Practice Queries (Beginner Version)
 
-#### Convert to Delta
-events.write.format("delta").mode("overwrite").save("/delta/events")
+from delta.tables import DeltaTable
 
-#### Create managed table
-events.write.format("delta").saveAsTable("events_table")
+#### MERGE for incremental updates
+deltaTable = DeltaTable.forPath(spark, "/delta/events")
+updates = spark.read.csv("/path/to/new_data.csv", header=True, inferSchema=True)
 
-#### SQL approach
-spark.sql("""
-    CREATE TABLE events_delta
-    USING DELTA
-    AS SELECT * FROM events_table
-""")
+deltaTable.alias("t").merge(
+    updates.alias("s"),
+    "t.user_session = s.user_session AND t.event_time = s.event_time"
+).whenMatchedUpdateAll() \
+ .whenNotMatchedInsertAll() \
+ .execute()
 
-#### Test schema enforcement
-try:
-    wrong_schema = spark.createDataFrame([("a","b","c")], ["x","y","z"])
-    wrong_schema.write.format("delta").mode("append").save("/delta/events")
-except Exception as e:
-    print(f"Schema enforcement: {e}")
+#### Time travel
+v0 = spark.read.format("delta").option("versionAsOf", 0).load("/delta/events")
+yesterday = spark.read.format("delta") \
+    .option("timestampAsOf", "2024-01-01").load("/delta/events")
+
+#### Optimize
+spark.sql("OPTIMIZE events_table ZORDER BY (event_type, user_id)")
+spark.sql("VACUUM events_table RETAIN 168 HOURS")
 
 ## Notebooks
 
-![Day 4 File](../submissions/day04/Day4.ipynb)
+![Day 5 File](../submissions/day05/Day5.ipynb)
 
 ## Screenshots
 
-![Day 4 File](../submissions/day04/Day4a.png)
+![Day 5 File](../submissions/day05/Day5a.png)
 
-![Day 4 File](../submissions/day04/Day4b.png)
+![Day 5 File](../submissions/day05/Day5b.png)
 
-![Day 4 File](../submissions/day04/Day4c.png)
+![Day 5 File](../submissions/day05/Day5c.png)
 
