@@ -52,11 +52,3 @@ product_perf.write.format("delta").mode("overwrite").save("/delta/gold/products"
 ## Notebooks
 
 ![Day 6 File](../submissions/day06/Day6.ipynb)
-
-## Screenshots
-
-![Day 6 File](../submissions/day06/Day6a.png)
-
-![Day 6 File](../submissions/day06/Day6b.png)
-
-![Day 6 File](../submissions/day06/Day6c.png)
