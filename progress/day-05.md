@@ -1,4 +1,4 @@
-# Day 4 Completed – Delta Lake Advanced (Databricks 14 Days AI Challenge)
+# Day 5 Completed – Delta Lake Advanced (Databricks 14 Days AI Challenge)
 
 Today I practiced **Advanced Delta Table** on an e-commerce events dataset in Databricks.
 
