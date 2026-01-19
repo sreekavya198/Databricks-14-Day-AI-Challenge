@@ -1,32 +1,31 @@
-# Day 11 Completed — Statistical Analysis & ML Prep
+# Day 13 Completed — Model Comparison & Feature Engineering
 
-Today I practiced **statistical Analysis & ML Prep** in Databricks using:
+Today I practiced **Model Comparison & Feature Engineering** in Databricks:
 
 ---
 
 ## 📘 What I Learned Today
-- Descriptive statistics
-- Hypothesis testing
-- A/B test design
-- Feature engineering
+- Training multiple models
+- Hyperparameter tuning
+- Feature importance
+- Spark ML Pipelines
 
 ---
 
 ## 🛠️ Tasks I Completed
-1. Calculate statistical summaries
-2. Test hypotheses (weekday vs weekend)
-3. Identify correlations
-4. Engineer features for ML
+1. Train 3 different models
+2. Compare metrics in MLflow
+3. Build Spark ML pipeline
+4. Select best model
 
 ---
 
 ## Notebooks
 
-![Day 11 File](../submissions/day11/Day11.ipynb)
+![Day 13 File](../submissions/day13/Day12.ipynb)
 
 ## Screenshots
 
-![Day 11 File](../submissions/day11/Day11a.png)
+![Day 13 File](../submissions/day13/Day13a.png)
 
-![Day 11 File](../submissions/day11/Day11b.png)
 
