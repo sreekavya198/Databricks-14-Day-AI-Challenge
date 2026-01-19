@@ -24,9 +24,13 @@ Goal: understand *why* queries are slow and how to make them faster.
 
 ---
 
-#### Screenshots
-![Day 10 screenshot](../assets/day-10/ss1.png)
-![Day 10 screenshot](../assets/day-10/ss2.png)
-![Day 10 screenshot](../assets/day-10/ss3.png)
-![Day 10 screenshot](../assets/day-10/ss4.png)
+## Notebooks
+
+![Day 10 File](../submissions/day10/Day10.ipynb)
+
+## Screenshots
+
+![Day 10 File](../submissions/day10/Day10a.png)
+
+![Day 10 File](../submissions/day10/Day10b.png)
 
