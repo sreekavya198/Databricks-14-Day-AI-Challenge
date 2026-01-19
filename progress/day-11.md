@@ -20,9 +20,13 @@ Today I practiced **statistical Analysis & ML Prep** in Databricks using:
 
 ---
 
-#### Screenshots
-![Day 11 screenshot](../assets/day-10/ss1.png)
-![Day 10 screenshot](../assets/day-10/ss2.png)
-![Day 10 screenshot](../assets/day-10/ss3.png)
-![Day 10 screenshot](../assets/day-10/ss4.png)
+## Notebooks
+
+![Day 11 File](../submissions/day11/Day11.ipynb)
+
+## Screenshots
+
+![Day 11 File](../submissions/day11/Day11a.png)
+
+![Day 11 File](../submissions/day11/Day11b.png)
 
