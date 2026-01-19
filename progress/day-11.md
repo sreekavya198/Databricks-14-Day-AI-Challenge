@@ -1,6 +1,6 @@
 # Day 11 Completed — Statistical Analysis & ML Prep
 
-Today I practiced **statistical Analysis & ML Prep** in Databricks using:
+Today I practiced **statistical Analysis & ML Prep** in Databricks:
 
 ---
 
